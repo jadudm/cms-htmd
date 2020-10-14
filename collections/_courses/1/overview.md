@@ -1,6 +1,11 @@
 ---
 layout: widepage
 title: "Course One: Overview"
+course: 1
+lesson: 1
+indicator: Admin
+priority: Low
+date: October 14, 2020
 ---
 
 # {{ page.title }}
@@ -16,6 +21,6 @@ Subsequent courses will build your depth of knowledge regarding the practice of 
 ## Lessons in Course One
 <ol>
 {% for p in lessons_only  %}
-<li><a href="{{ p.url }}">{{ p.title }}</a></li>
+<li><a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>
 {% endfor %}
 </ol>
